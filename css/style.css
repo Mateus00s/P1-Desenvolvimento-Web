@@ -1,0 +1,132 @@
+body {
+    background-color: #a6dced;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title {
+    flex-direction: column;
+    line-height: 10px;
+}
+
+li {
+    display: inline-block;
+    margin: 8px;
+}
+
+a{
+    color: blue;
+}
+
+h1 {
+    font-weight: 200;
+    transition: 0.3ms all;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 56px;
+    line-height: 15px;  
+}
+
+span {
+    color: blue;
+}
+
+p {
+    line-height: 20px;
+    max-width: 500px;
+}
+
+.apresentacao {
+    width: 680px;
+}
+
+.logo{
+    width: 130px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: navy; 
+    cursor: pointer; 
+}
+
+input{
+    margin-top: 20px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+}
+
+h3{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.modelos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    
+    
+}
+
+.modelo:hover{
+    transform: scale(0.8);
+}
+
+.modelo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    transition: 0.5s;
+}
+
+
+.modelo p {
+    text-align: center;
+}
+

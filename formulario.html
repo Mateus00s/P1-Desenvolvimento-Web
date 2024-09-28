@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="./css/formulario.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h2 id="hello-user">Olá, informe seus dados</h2>
+        </div>
+    </header>
+    <div id="form-user">
+        <form id="registro-user">
+            <!-- <label for="txtNome">Nome:</label><br> -->
+            <input type="text" id="txtNome" name="txtNome" placeholder="Nome..."><br>
+            <span id="error-nome" class="input-error">Nome não preenchido ou incorreto. Revise.</span><br>
+            <!-- <label for="txtCidade/Estado">Cidade/Estado:</label><br> -->
+            <input type="text" id="txtCidade/Estado" name="txtCidade/Estado" placeholder="Cidade/Estado..."><br>
+            <span id="error-cidade/estado" class="input-error">Cidade/Estado não preenchido ou incorreto. Revise.</span><br>
+            <!-- <label for="txtWhatsApp">WhatsApp:</label><br> -->
+            <input type="text" id="txtWhatsApp" name="txtWhatsApp" placeholder="WhatsApp..."><br>
+            <span id="error-whatsapp" class="input-error">WhatsApp não preenchido ou incorreto. Revise.</span><br>
+            <button type="button" onclick="registroUser()">Registrar</button>
+        </form>
+    </div>
+</body>
+<script>
+function registroUser() {
+    document.getElementById("hello-user").innerHTML = "Registro Feito";
+
+    var nome = document.getElementById("txtNome").value;
+    var cidadeestado = document.getElementById("txtCidade/Estado").value;
+    var whatsapp = document.getElementById("txtWhatsApp").value;
+
+    if (nome.length == 0) {
+        document.getElementById("error-nome").style.display = "block";
+    } else {
+        document.getElementById("error-nome").style.display = "none";
+    }
+
+    if (cidadeestado.length == 0) {
+        document.getElementById("error-cidade/estado").style.display = "block";
+    } else {
+        document.getElementById("error-cidade/estado").style.display = "none";
+    }
+    
+    if (whatsapp.length == 0) {
+        document.getElementById("error-whatsapp").style.display = "block";
+    } else {
+        document.getElementById("error-whatsapp").style.display = "none";
+    }
+    
+    if (nome.length != 0 && cidadeestado.length != 0 && whatsapp.length != 0) {
+        document.getElementById("hello-user").innerHTML = `Você se registrou como ${nome}`;
+        document.getElementById("registro-user").style.display = "none";    
+    }
+}
+
+
+</script>
+</html>
